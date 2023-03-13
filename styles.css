@@ -98,10 +98,31 @@ button.pChoice:active {
 
 .gameLog {
   display: flex;
+  flex-direction: column;
   flex: 1;
   border-radius: 10px;
   background-color: #f4f4f4;
 }
+
+  .gameLogT, .gameLogB {
+    display: flex;
+    flex: 1;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  
+
+
+  .gameLogT {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+
 
 /* Footer section */
 .footer {
