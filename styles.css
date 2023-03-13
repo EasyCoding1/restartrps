@@ -19,7 +19,20 @@ body {
 .hCenter {
   font-size: 2rem;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
 }
+
+
+#start-game-btn {
+  padding: 15px;
+  border-radius: 10px;
+}
+#start-game-btn:hover {
+  background-color: #68766f;
+}
+
+
 
 /* Main section */
 .main {
@@ -90,11 +103,21 @@ button.pChoice:active {
 
 .gameScrn {
   display: flex;
+  flex-direction: column;
   flex: 6;
   border-radius: 10px;
   margin-bottom: 20px;
   background-color: #f4f4f4;
 }
+
+  .score {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+
 
 .gameLog {
   display: flex;
@@ -139,7 +162,6 @@ button.pChoice:active {
   font-size: 0.8rem;
   font-weight: 600;
 }
-
 
 
 
