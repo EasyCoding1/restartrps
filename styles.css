@@ -9,7 +9,7 @@ body {
 /* Header section */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #363636;
   color: #fff;
@@ -20,38 +20,46 @@ body {
   font-size: 2rem;
   font-weight: 600;
   display: flex;
+  flex: 1;
   flex-direction: column;
+  align-items: center;
+}
+
+
+.hLeft, .hRight {
+display: flex;
+flex-direction: column;
+}
+
+.hRight {
+  margin-left: 200px;
+}
+
+
+#hLtext {
+  font-size: x-large;
 }
 
 
 #start-game-btn {
   padding: 15px;
   border-radius: 10px;
+  cursor: pointer;
 }
 #start-game-btn:hover {
   background-color: #68766f;
 }
 
-
-
 /* Main section */
 .main {
   display: flex;
-  flex-basis: 4;
-}
-
-.mainL {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  background-color: #fff;
+  margin: 20px;
 }
 
+.mainL,
 .mainR {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -86,19 +94,18 @@ button#Fire.pChoice:hover {
 }
 
 button.pChoice:active {
-  background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 .mainC {
   display: flex;
-  flex: 3;
   flex-direction: column;
   margin: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
 }
 
 .gameScrn {
@@ -110,14 +117,13 @@ button.pChoice:active {
   background-color: #f4f4f4;
 }
 
-  .score {
-    display: flex;
-    justify-content: space-around;
-    font-weight: 400;
-    font-size: 30px;
-  }
-
-
+.score {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  font-size: 30px;
+  padding: 20px;
+}
 
 .gameLog {
   display: flex;
@@ -127,29 +133,22 @@ button.pChoice:active {
   background-color: #f4f4f4;
 }
 
-  .gameLogT, .gameLogB {
-    display: flex;
-    flex: 1;
-    font-size: 25px;
-    font-weight: 400;
-  }
+.gameLogT,
+.gameLogB {
+  display: flex;
+  flex: 1;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 20px;
+}
 
-  
+.gameLogT {
+  justify-content: space-between;
+}
 
-
-  .gameLogT {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .gameLogB {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-  }
-
-
-
+.gameLogB {
+  justify-content: center;
+}
 
 /* Footer section */
 .footer {
@@ -165,4 +164,36 @@ button.pChoice:active {
 
 
 
+.score-update {
+  font-size: 1.5em;
+  color: green;
+  transition: font-size 0.5s, color 0.5s;
+}
 
+.win-indicator {
+  font-size: 1.5em;
+  color: green;
+  transition: font-size 0.5s, color 0.5s;
+}
+
+/*shamelessly stolen from google*/
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#soundTog {
+  animation: pulse 2s infinite;
+  transition: transform 0.5s;
+}
+#soundTog:hover {
+  background-color: #363636;
+}

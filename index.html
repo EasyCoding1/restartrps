@@ -6,60 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS GAME</title>
     <link rel="stylesheet" type="text/css" href="styles.css" /> 
-    </head>
+</head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="hLeft">
             <p id="hLtext">Rock Paper Scissors Game</p>
+            <p>Earth beats Fire!</p>
+            <p>Fire beats Wind!</p>
+            <p>Wind beats Earth!</p>
+            
+            
         </div>
         <div class="hCenter">
-            <h1 id ="titleCenter"> Earth, Wind and Fire!</h3>
-            <button id="start-game-btn">Start Game</button>
+            <h1 id ="titleCenter"> Earth, Wind and Fire!</h1>
+            <button id="start-game-btn">Reset Game</button>
         </div>
         <div class="hRight">
-            <button class="soundButton" id ="soundBtn">Sound</button>
+            <button class="soundToggle" id ="soundTog">Sound</button>
         </div>
-    </div>
+    </header>
 
-
-
-    <div class="main">
-        <div class=mainL>
-            <button class="pChoice" id="Earth"><img id="Earth" src="../restartrps/images.png/earth.png"></button>
-            <button class="pChoice" id="Wind"><img id ="Wind" src="../restartrps/images.png/wind.png"></button>
-            <button class="pChoice" id="Fire"><img id ="Fire" src="../restartrps/images.png/fire.png"></button>
-        </div>
-        <div class="mainC">
+    <main class="main">
+        <section class="mainL">
+            <button class="pChoice" id="Earth"><img src="../restartrps/images.png/earth.png" alt="Earth"></button>
+            <button class="pChoice" id="Wind"><img src="../restartrps/images.png/wind.png" alt="Wind"></button>
+            <button class="pChoice" id="Fire"><img src="../restartrps/images.png/fire.png" alt="Fire"></button>
+        </section>
+        <section class="mainC">
             <div class="gameScrn">
-                
                 <div class="score">
                     <div class="playerScore">Player Score: 0</div>
                     <div class="computerScore">Computer Score: 0</div>
-                  </div>
+                </div>
             </div>
             <div class="gameLog">
                 <div class="gameLogT">
-                    <div class = "gameLogTL"></div>
-                    <div class = "gameLogTR"></div>
+                    <div class="gameLogTL"></div>
+                    <div class="gameLogTR"></div>
                 </div>
                 <div class="gameLogB"></div>
             </div>
-        </div>
-        <div class="mainR">
-            <button class="cChoice" id="Earth"><img src="../restartrps/images.png/earth.png"></button>
-            <button class="cChoice" id="Wind"><img src="../restartrps/images.png/wind.png"></button>
-            <button class="cChoice" id="Fire"><img src="../restartrps/images.png/fire.png"></button>
-        </div>
-    </div>
+        </section>
+        <section class="mainR">
+            <button class="cChoice" id="cEarth"><img src="images/earth.png" alt="Earth"></button>
+            <button class="cChoice" id="cWind"><img src="images/wind.png" alt="Wind"></button>
+            <button class="cChoice" id="cFire"><img src="images/fire.png" alt="Fire"></button>
+        </section>
+    </main>
 
-
-
-    <div class="footer">
+    <footer class="footer">
         <div class="fContent">
             <p> Made by Tom Rawson, for Founders and Coders 2023.</p>
         </div>
-    </div>
-
-    <script src="../restartrps/scripts.js"></script>
+    </footer>
+    <audio id="background-music" autoplay loop hidden>
+        <source src="../restartrps/sounds.mp3/Earth Wind Fire - September (Official HD Video) [TubeRipper.com].mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="scripts.js"></script>
 </body>
 </html>
