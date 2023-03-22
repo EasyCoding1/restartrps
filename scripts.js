@@ -5,7 +5,7 @@ const playerScoreBox = document.querySelector('.playerScore');
 const computerScoreBox = document.querySelector('.computerScore');
 const playerTextBox = document.querySelector('.gameLogTL');
 const computerTextBox = document.querySelector('.gameLogTR');
-const resultTextBox = document.querySelector('.gameLogB');
+const resultTextBox = document.querySelector('#winText');
 let playerScore = 0;
 let computerScore = 0;
 
@@ -94,7 +94,15 @@ function updateGameLog(result, playerChoice, computerChoice) {
   computerScoreBox.textContent = `Computer Score: ${computerScore}`;
 
   if (playerScore === 5 || computerScore === 5) {
-    const playAgain = confirm(`Game Over! Do you want to play again?`);
+    let message;
+
+    if (playerScore === 5) {
+      message = 'You WIN! Do you want to play again?';
+    } else {
+      message = 'You LOSE! Do you want to play again?';
+    }
+
+    const playAgain = confirm(message);
 
     if (playAgain) {
       resetGame();
@@ -126,6 +134,8 @@ backgroundMusic.play();
   } else {
     backgroundMusic.pause();
     soundButton.textContent = "Sound"
-  }
-});
+  };
 
+
+
+  
