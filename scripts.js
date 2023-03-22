@@ -6,23 +6,22 @@ const computerScoreBox = document.querySelector('.computerScore');
 const playerTextBox = document.querySelector('.gameLogTL');
 const computerTextBox = document.querySelector('.gameLogTR');
 const resultTextBox = document.querySelector('.gameLogB');
-
 let playerScore = 0;
 let computerScore = 0;
 
-// Reset game function
+// reset game function
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
   updateGameLog(0, undefined, undefined);
 }
 
-// Bind event listener to the Reset Game button
+// event listener to the reset game button
 resetGameBtn.addEventListener('click', () => {
   resetGame();
 });
 
-// Bind event listeners to player choice buttons
+// event listenes to player choice buttons
 playerOptions.forEach(option => {
   option.addEventListener('click', e => {
     const playerChoice = e.currentTarget.id;
@@ -120,8 +119,7 @@ const backgroundMusic = document.querySelector('#background-music');
 
 backgroundMusic.play();
 
-// Toggle the audio on and off when the sound button is clicked
-soundButton.addEventListener("click", () => {
+// Toggle the audio 
   if (backgroundMusic.paused) {
     backgroundMusic.play();
     soundButton.textContent = "Mute"
