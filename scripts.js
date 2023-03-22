@@ -124,18 +124,19 @@ const soundButton = document.querySelector('#soundTog');
 const backgroundMusic = document.querySelector('#background-music');
 
 
-
-backgroundMusic.play();
-
-// Toggle the audio 
+soundButton.addEventListener('click', () => {
+  // Toggle the audio 
   if (backgroundMusic.paused) {
     backgroundMusic.play();
-    soundButton.textContent = "Mute"
+    soundButton.textContent = "Mute";
   } else {
     backgroundMusic.pause();
-    soundButton.textContent = "Sound"
-  };
+    soundButton.textContent = "Sound";
+  }
+});
 
+// Start the background music
+backgroundMusic.play();
 
 
   
