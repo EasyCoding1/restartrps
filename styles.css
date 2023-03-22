@@ -193,6 +193,8 @@ button.pChoice:active {
 #soundTog {
   animation: pulse 2s infinite;
   transition: transform 0.5s;
+  background-color: #87f28b;
+  margin-right: 25px;
 }
 #soundTog:hover {
   background-color: #363636;
